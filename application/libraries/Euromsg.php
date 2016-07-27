@@ -88,8 +88,8 @@ class Euromsg
      */
     public function logout()
     {
-        $EuroMsg 			      = $this->client($this->authUrl);
-        $getLogOutProcess 	= $EuroMsg->Logout($this->serviceTicket);
+        $EuroMsg          = $this->client($this->authUrl);
+        $getLogOutProcess = $EuroMsg->Logout($this->serviceTicket);
         return $getLogOutProcess;
     }
 
