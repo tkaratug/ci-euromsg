@@ -181,13 +181,15 @@ class Euromsg
             'PostType'          => 'Post Type'
         );
 
-        $send         = $EuroMsg->PostHtmlWithType($mailParams);
-        $Code         = $send->PostHtmlWithTypeResult->Code;
-        $detailedMsg  = $send->PostHtmlWithTypeResult->DetailedMessage;
+        $send         = $EuroMsg->PostHtml($mailParams);
+        $Code         = $send->PostHtmlResult->Code;
+        $Message      = $send->PostHtmlResult->Message;
+        $detailedMsg  = $send->PostHtmlResult->DetailedMessage;
 
         return array(
-            'code'  => $Code,
-            'text'  => $detailedMsg
+            'code'              => $Code,
+            'message'           => $Message,
+            'detailedMessage'   => $detailedMsg
         );
     }
 
