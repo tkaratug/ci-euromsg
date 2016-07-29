@@ -177,8 +177,7 @@ class Euromsg
             'Charset'           => $this->charset,
             'ToName'            => $this->toName,
             'ToEmailAddress'    => $this->toEmail,
-            'Attachments'       => null,
-            'PostType'          => 'Post Type'
+            'Attachments'       => null
         );
 
         $send         = $EuroMsg->PostHtml($mailParams);
